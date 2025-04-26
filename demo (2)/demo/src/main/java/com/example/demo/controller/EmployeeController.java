@@ -43,8 +43,8 @@ public class EmployeeController {
         return "Employee Updated Successfully";
     }
 
-    @DeleteMapping
-    public String deleteEmployeeDetails(@RequestBody Long employeeId)
+    @DeleteMapping("/{employeeId}")
+    public String deleteEmployeeDetails(@PathVariable Long employeeId)
     {
         employeeService.deleteEmployee(employeeId);
         return "Employee Deleted Successfully";
