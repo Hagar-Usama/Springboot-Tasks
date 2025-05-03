@@ -27,7 +27,7 @@ public class EmployeeController {
         if (employeeId == null) {
             ApiResponse<EmployeeDto> errorResponse = new ApiResponse<>(
                     false,
-                    "Employee ID must not be null",
+                    "Employee id must not be null",
                     null
             );
             return ResponseEntity.badRequest().body(errorResponse);
